@@ -5,9 +5,94 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FF8271;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-ExtraLight.eot');
+  src: url('./fonts/Oxanium-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-ExtraLight.svg#Oxanium-ExtraLight') format('svg'),
+       url('./fonts/Oxanium-ExtraLight.ttf') format('truetype'),
+       url('./fonts/Oxanium-ExtraLight.woff') format('woff'),
+       url('./fonts/Oxanium-ExtraLight.woff2') format('woff2');
+  font-weight: 100;
+  font-style: extraLight;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-Light.eot');
+  src: url('./fonts/Oxanium-Light.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-Light.svg#Oxanium-Light') format('svg'),
+       url('./fonts/Oxanium-Light.ttf') format('truetype'),
+       url('./fonts/Oxanium-Light.woff') format('woff'),
+       url('./fonts/Oxanium-Light.woff2') format('woff2');
+  font-weight: 200;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-Medium.eot');
+  src: url('./fonts/Oxanium-Medium.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-Medium.svg#Oxanium-Medium') format('svg'),
+       url('./fonts/Oxanium-Medium.ttf') format('truetype'),
+       url('./fonts/Oxanium-Medium.woff') format('woff'),
+       url('./fonts/Oxanium-Medium.woff2') format('woff2');
+  font-weight: 300;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-Regular.eot');
+  src: url('./fonts/Oxanium-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-Regular.svg#Oxanium-Regular') format('svg'),
+       url('./fonts/Oxanium-Regular.ttf') format('truetype'),
+       url('./fonts/Oxanium-Regular.woff') format('woff'),
+       url('./fonts/Oxanium-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-SemiBold.eot');
+  src: url('./fonts/Oxanium-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-SemiBold.svg#Oxanium-SemiBold') format('svg'),
+       url('./fonts/Oxanium-SemiBold.ttf') format('truetype'),
+       url('./fonts/Oxanium-SemiBold.woff') format('woff'),
+       url('./fonts/Oxanium-SemiBold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: semiBold;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-Bold.eot');
+  src: url('./fonts/Oxanium-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-Bold.svg#Oxanium-Bold') format('svg'),
+       url('./fonts/Oxanium-Bold.ttf') format('truetype'),
+       url('./fonts/Oxanium-Bold.woff') format('woff'),
+       url('./fonts/Oxanium-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('./fonts/Oxanium-ExtraBold.eot');
+  src: url('./fonts/Oxanium-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Oxanium-ExtraBold.svg#Oxanium-ExtraBold') format('svg'),
+       url('./fonts/Oxanium-ExtraBold.ttf') format('truetype'),
+       url('./fonts/Oxanium-ExtraBold.woff') format('woff'),
+       url('./fonts/Oxanium-ExtraBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: extraBold;
 }
