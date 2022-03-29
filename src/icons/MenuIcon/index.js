@@ -1,3 +1,5 @@
+import React from 'react';
+
 const MenuIcon = (props) => (
     <svg
       width={60}
@@ -10,4 +12,4 @@ const MenuIcon = (props) => (
     </svg>
   )
 
-export default MenuIcon  
+export default MenuIcon;
