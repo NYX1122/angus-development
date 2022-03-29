@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function WhiteDiamond (props) {
+  return(
     <svg
       width={71}
       height={71}
@@ -10,4 +11,5 @@ export default function WhiteDiamond (props) {
     >
       <path fill="#fff" d="M0 35.355 35.355 0 70.71 35.355 35.355 70.71z" />
     </svg>
+  )
 }
