@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Arrow = (props) => (
+export default function Arrow (props) {
     <svg
         width={61}
         height={182}
@@ -15,6 +15,4 @@ const Arrow = (props) => (
         />
         <path d="m30.5 181.488 1.772-1.76H28.73l1.77 1.76Z" fill="#fff" />
     </svg>
-)
-  
-export default Arrow;
+}

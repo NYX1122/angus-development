@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MenuIcon = (props) => (
+export default function MenuIcon (props) {
     <svg
       width={60}
       height={11}
@@ -10,6 +10,4 @@ const MenuIcon = (props) => (
     >
       <path stroke="#fff" strokeWidth={2} d="M0 1h60M0 10h60" />
     </svg>
-  )
-
-export default MenuIcon;
+}
