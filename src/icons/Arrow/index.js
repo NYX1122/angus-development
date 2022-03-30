@@ -1,20 +1,27 @@
 import React from 'react';
 
-export default function Arrow (props) {
-    return(
-        <svg
-            width={61}
-            height={182}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            {...props}
-        >
-            <path
-            stroke="#fff"
-            strokeWidth={3}
-            d="M30.499 180V0M30.938 178.939l28.284-28.284M30.062 178.94 1.778 150.654"
-            />
-            <path d="m30.5 181.488 1.772-1.76H28.73l1.77 1.76Z" fill="#fff" />
-        </svg>
-    )
+export default function Arrow() {
+    return (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='61'
+        height='182'
+        fill='none'
+        viewBox='0 0 61 182'
+      >
+        <path stroke='#fff' strokeWidth='3' d='M30.499 180L30.499 0'></path>
+        <path
+          stroke='#fff'
+          strokeWidth='3'
+          d='M30.938 178.939L59.222 150.655'
+        ></path>
+        <path
+          stroke='#fff'
+          strokeWidth='3'
+          d='M0 -1.5L40 -1.5'
+          transform='scale(-1 1) rotate(-45 202.778 125.008)'
+        ></path>
+        <path fill='#fff' d='M30.5 181.488l1.772-1.76H28.73l1.77 1.76z'></path>
+      </svg>
+    );
 }
