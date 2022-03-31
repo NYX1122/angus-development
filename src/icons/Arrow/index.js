@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import useWindowDimensions from '../../customHooks/useWindowDimensions';
 
@@ -6,14 +6,14 @@ import { Box } from '@mui/material';
 
 export default function Arrow() {
     const { height } = useWindowDimensions();
-
-    console.log(height);
     
     const lineHeight = () => {
-        if(height < 850) {
+        if(height < 850 && height > 730) {
             return 200 - (850 - height);
+        } else if (height < 730) {
+            return 160 - (730 - height);
         } else {
-            return 200;
+            return 200
         }
     }
 
