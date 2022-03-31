@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import LandingIntroduction from '../LandingIntroduction';
 
 import useWindowDimensions from '../../customHooks/useWindowDimensions';
 
@@ -8,11 +10,10 @@ import Arrow from '../../icons/Arrow';
 import { Box, Typography } from '@mui/material';
 
 export default function Landing() {
+    const [isPaused, setIsPaused] = useState(false);
     const { height } = useWindowDimensions();
     const landingText = 'A small business, empowering other small businesses with the versatility of the internet.';
-    const splitText = landingText.split('');
-    console.log(splitText);
-
+    const landingWords = landingText.split(' ');
 
     return(
         <Box>
@@ -21,14 +22,16 @@ export default function Landing() {
                 <WhiteDiamond></WhiteDiamond>
                 <WhiteDiamond></WhiteDiamond>
             </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <Typography fontSize={ (height < 730) ? '34px' : '38px' } sx={{
-                    color: 'white',
-                    marginLeft: '18px',
-                    fontWeight: 'light'
-                }}>A small business, empowering other small businesses with the versatility of the internet.</Typography>
+            <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%' }}>
+                {landingWords.map((word, index) => (
+                    <Box key={index} sx={{ display: 'inline-block' }}>
+                        <LandingIntroduction word={word} isPaused={isPaused} setIsPaused={setIsPaused}></LandingIntroduction>
+                        <Box sx={{ display: 'inline-block' }}>{'\u00A0'}{'\u00A0'}</Box>
+                    </Box>
+                ))}
             </Box>
-            <Box marginY={ (height < 730) ? '10px' : '18px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>                <WhiteDiamond></WhiteDiamond>
+            <Box marginY={ (height < 730) ? '10px' : '18px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>                
+                <WhiteDiamond></WhiteDiamond>
                 <WhiteDiamond></WhiteDiamond>
                 <WhiteDiamond></WhiteDiamond>
             </Box>
