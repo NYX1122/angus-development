@@ -4,8 +4,9 @@ import LandingIntroduction from '../LandingIntroduction';
 
 import useWindowDimensions from '../../customHooks/useWindowDimensions';
 
-import WhiteDiamond from '../../icons/WhiteDiamond';
+import WhiteCircle from '../../icons/WhiteCircle';
 import Arrow from '../../icons/Arrow';
+import LandingWaves from '../../icons/LandingWaves';
 
 import { Box, Typography } from '@mui/material';
 
@@ -16,11 +17,11 @@ export default function Landing() {
     const landingWords = landingText.split(' ');
 
     return(
-        <Box>
+        <Box position='relative'>
             <Box marginY={ (height < 730) ? '10px' : '18px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>
-                <WhiteDiamond></WhiteDiamond>
-                <WhiteDiamond></WhiteDiamond>
-                <WhiteDiamond></WhiteDiamond>
+                <WhiteCircle></WhiteCircle>
+                <WhiteCircle></WhiteCircle>
+                <WhiteCircle></WhiteCircle>
             </Box>
             <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%' }}>
                 {landingWords.map((word, index) => (
@@ -31,9 +32,9 @@ export default function Landing() {
                 ))}
             </Box>
             <Box marginY={ (height < 730) ? '10px' : '18px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>                
-                <WhiteDiamond></WhiteDiamond>
-                <WhiteDiamond></WhiteDiamond>
-                <WhiteDiamond></WhiteDiamond>
+                <WhiteCircle></WhiteCircle>
+                <WhiteCircle></WhiteCircle>
+                <WhiteCircle></WhiteCircle>
             </Box>
             <Box sx={{
                 display: 'flex',
@@ -44,7 +45,7 @@ export default function Landing() {
                 <Box sx={{ width: '100%', height: '2px', backgroundColor: 'white' }}></Box>
                 <Typography fontSize={ (height < 730) ? '34px' : '38px' } height={ (height < 730) ? '45px' : '50px' } sx={{
                     color: 'white',
-                    fontWeight: 'light',
+                    fontWeight: 100,
                 }}>PROJECTS</Typography>
                 <Box sx={{ width: '100%', height: '2px', backgroundColor: 'white' }}></Box>
             </Box>
@@ -55,6 +56,9 @@ export default function Landing() {
                 <Arrow></Arrow>
                 <Arrow></Arrow>
                 <Arrow></Arrow>
+            </Box>
+            <Box position='absolute' zIndex='-10' top={height - 280}>
+                <LandingWaves></LandingWaves>
             </Box>
         </Box>
     )
