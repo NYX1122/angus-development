@@ -26,8 +26,6 @@ export default function LandingIntroduction({ word, isPaused, setIsPaused }) {
         onRest: changeI()
     });
 
-    console.log(i.current);
-
     return(
         <Box sx={{ display: 'inline-block' }}>
             {trailList.map((styles, index) =>(

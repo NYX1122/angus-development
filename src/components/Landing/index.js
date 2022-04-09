@@ -18,10 +18,10 @@ export default function Landing() {
 
     return(
         <Box position='relative'>
-            <Box marginY={ (height < 730) ? '10px' : '18px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>
-                <WhiteCircle></WhiteCircle>
-                <WhiteCircle></WhiteCircle>
-                <WhiteCircle></WhiteCircle>
+            <Box marginY={ (height < 730) ? '5px' : '9px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>
+                <WhiteCircle number='1'></WhiteCircle>
+                <WhiteCircle number='2'></WhiteCircle>
+                <WhiteCircle number='3'></WhiteCircle>
             </Box>
             <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%' }}>
                 {landingWords.map((word, index) => (
@@ -31,10 +31,10 @@ export default function Landing() {
                     </Box>
                 ))}
             </Box>
-            <Box marginY={ (height < 730) ? '10px' : '18px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>                
-                <WhiteCircle></WhiteCircle>
-                <WhiteCircle></WhiteCircle>
-                <WhiteCircle></WhiteCircle>
+            <Box marginY={ (height < 730) ? '5px' : '9px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>                
+                <WhiteCircle number='4'></WhiteCircle>
+                <WhiteCircle number='5'></WhiteCircle>
+                <WhiteCircle number='6'></WhiteCircle>
             </Box>
             <Box sx={{
                 display: 'flex',
