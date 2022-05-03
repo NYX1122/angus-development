@@ -32,7 +32,6 @@ export default function LandingIntroduction({ word, isPaused, setIsPaused }) {
                 <animated.div style={{ display: 'inline-block', ...styles }} key={index}>
                     <Typography fontSize={ (height < 730) ? '34px' : '38px' } sx={{
                         color: 'white',
-                        fontWeight: 100,
                         textShadow: 'black 0 1px 8px'
                     }}>
                         {splitText[index]}

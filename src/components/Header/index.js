@@ -11,7 +11,6 @@ export default function Header() {
                 <Grid item xs={8.5}>
                     <Typography sx={{
                         color: 'white',
-                        fontWeight: 100,
                         marginTop: '6px',
                         marginLeft: '15px',
                         fontSize: {

@@ -8,10 +8,6 @@ export default createTheme({
         }
     },
     typography: {
-        fontFamily: 'Oxanium',
-        fontWeightLight: 200,
-        fontWeightMedium: 300,
-        fontWeightRegular: 400,
-        fontWeightBold: 600
+        fontFamily: 'Play'
     }
 });

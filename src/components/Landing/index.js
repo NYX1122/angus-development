@@ -4,7 +4,6 @@ import LandingIntroduction from '../LandingIntroduction';
 
 import useWindowDimensions from '../../customHooks/useWindowDimensions';
 
-import WhiteCircle from '../../icons/WhiteCircle';
 import Arrow from '../../icons/Arrow';
 import LandingWaves from '../../icons/LandingWaves';
 
@@ -18,11 +17,6 @@ export default function Landing() {
 
     return(
         <Box position='relative'>
-            <Box marginY={ (height < 730) ? '5px' : '9px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>
-                <WhiteCircle number='1'></WhiteCircle>
-                <WhiteCircle number='2'></WhiteCircle>
-                <WhiteCircle number='3'></WhiteCircle>
-            </Box>
             <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%' }}>
                 {landingWords.map((word, index) => (
                     <Box key={index} sx={{ display: 'inline-block' }}>
@@ -30,11 +24,6 @@ export default function Landing() {
                         <Box sx={{ display: 'inline-block' }}>{'\u00A0'}{'\u00A0'}</Box>
                     </Box>
                 ))}
-            </Box>
-            <Box marginY={ (height < 730) ? '5px' : '9px' } sx={{ display: 'flex', justifyContent: 'space-around' }}>                
-                <WhiteCircle number='4'></WhiteCircle>
-                <WhiteCircle number='5'></WhiteCircle>
-                <WhiteCircle number='6'></WhiteCircle>
             </Box>
             <Box sx={{
                 display: 'flex',
