@@ -9,14 +9,14 @@ export default function Title({ letter, index }) {
 
     useEffect(() => {
         if( index < 16 ) {
-            const timeout = setTimeout(() => {
+            setTimeout(() => {
                 setVisible(true);
             }, (((index*.15) - .15) * 1000));
-            const timeout2 = setTimeout(() => {
+            setTimeout(() => {
                 setVisible(false);
             }, (index*.15)*1000);
         }
-    }, []);
+    }, [index]);
 
     return(
         <>

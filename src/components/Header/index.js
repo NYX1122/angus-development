@@ -3,7 +3,7 @@ import React from 'react';
 import MenuIcon from '../../icons/MenuIcon';
 import Title from '../Title';
 
-import { Box, Typography, IconButton, Grid } from '@mui/material';
+import { Box, IconButton, Grid } from '@mui/material';
 
 import { motion } from 'framer-motion';
 

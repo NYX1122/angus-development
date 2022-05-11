@@ -1,13 +1,8 @@
 import React from 'react';
 
-import useWindowDimensions from '../../customHooks/useWindowDimensions';
-
-import { Box } from '@mui/material';
-
 import { motion } from 'framer-motion';
 
 export default function LandingWaves() {
-    const { height } = useWindowDimensions();
 
     return (
       <>

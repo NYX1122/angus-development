@@ -24,7 +24,6 @@ export default function Landing() {
 
     const projectText = 'PROJECTS';
     const projectLetters = projectText.split('');
-    console.log(projectLetters);
 
     return(
         <Box position='relative'>
