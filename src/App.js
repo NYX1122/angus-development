@@ -14,8 +14,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Box>
         <p>Hello</p>
-        {/* <Header></Header>
-        <Landing></Landing> */}
+        <Header></Header>
+        <Landing></Landing>
       </Box>
     </ThemeProvider>
   );
