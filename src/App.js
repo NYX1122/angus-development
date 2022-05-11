@@ -13,7 +13,6 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box>
-        <p>Hello</p>
         <Header></Header>
         <Landing></Landing>
       </Box>
