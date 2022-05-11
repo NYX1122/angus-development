@@ -1,29 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import LandingIntroduction from '../LandingIntroduction';
+import ProjectsText from '../ProjectsText';
 
 import useWindowDimensions from '../../customHooks/useWindowDimensions';
 
 import Arrow from '../../icons/Arrow';
 import LandingWaves from '../../icons/LandingWaves';
 
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+
+import { motion } from 'framer-motion';
 
 export default function Landing() {
-    const [isPaused, setIsPaused] = useState(false);
     const { height } = useWindowDimensions();
-    const landingText = 'A small business, empowering other small businesses with the versatility of the internet.';
-    const landingWords = landingText.split(' ');
+
+    const landingIntro = 'A small business, empowering other small businesses with the functionality and versatility of the internet.';
+    const landingWords = landingIntro.split(' ');
+    const wordLengthArray = landingWords.map(word => {
+        return word.length
+    });
+    const landingIntroLetterCount = landingIntro.replace(/ /g, '').length;
+
+    const projectText = 'PROJECTS';
+    const projectLetters = projectText.split('');
+    console.log(projectLetters);
 
     return(
         <Box position='relative'>
-            <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%' }}>
+            <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%', paddingY: 3 }}>
                 {landingWords.map((word, index) => (
-                    <Box key={index} sx={{ display: 'inline-block' }}>
-                        <LandingIntroduction word={word} isPaused={isPaused} setIsPaused={setIsPaused}></LandingIntroduction>
-                        <Box sx={{ display: 'inline-block' }}>{'\u00A0'}{'\u00A0'}</Box>
-                    </Box>
+                    <LandingIntroduction word={word} index={index} key={index} wordLengthArray={wordLengthArray}></LandingIntroduction>
                 ))}
+                <Box
+                    component={motion.div}
+                    sx={{
+                        height: '30px',
+                        width: '4px',
+                        backgroundColor: 'white',
+                        display: 'inline-block'
+                    }}
+                    initial={{ x: -5 }}
+                    animate={{ opacity: 0 }}
+                    transition={{ duration: .3, delay: (landingIntroLetterCount*.1029), repeat: 16, repeatType: 'mirror' }}
+                ></Box> 
             </Box>
             <Box sx={{
                 display: 'flex',
@@ -31,22 +51,52 @@ export default function Landing() {
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                <Box sx={{ width: '100%', height: '2px', backgroundColor: 'white' }}></Box>
-                <Typography fontSize={ (height < 730) ? '34px' : '38px' } height={ (height < 730) ? '45px' : '50px' } sx={{
-                    color: 'white',
-                    fontWeight: 100,
-                }}>PROJECTS</Typography>
-                <Box sx={{ width: '100%', height: '2px', backgroundColor: 'white' }}></Box>
+                <Box
+                    component={motion.div}
+                    sx={{ width: '100%', height: '2px', backgroundColor: 'white' }}
+                    initial={{ x: '100%' }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 2, ease: 'easeInOut' }}
+                ></Box>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    {projectLetters.map((letter, index) => (
+                        <ProjectsText letter={letter} key={index} index={index}></ProjectsText>
+                    ))}
+                    <Box
+                        component={motion.div}
+                        sx={{
+                            height: '35px',
+                            width: '4px',
+                            backgroundColor: 'white',
+                            display: 'inline-block'
+                        }}
+                        initial={{ opacity: 1, x: 3, y: -2 }}
+                        animate={{ opacity: 0 }}
+                        transition={{ duration: .3, delay: (projectText.length*.14), repeat: 16, repeatType: 'mirror' }}
+                    ></Box>
+                </Box>
+                <Box 
+                    component={motion.div}
+                    sx={{ width: '100%', height: '2px', backgroundColor: 'white' }}
+                    initial={{ x: '-100%' }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 2, ease: 'easeInOut' }}
+                ></Box>
             </Box>
             <Box sx={{
                 display: 'flex',
                 justifyContent: 'space-around'
             }}>
-                <Arrow></Arrow>
-                <Arrow></Arrow>
-                <Arrow></Arrow>
+                <Arrow order='1'></Arrow>
+                <Arrow order='2'></Arrow>
+                <Arrow order='3'></Arrow>
             </Box>
-            <Box position='absolute' zIndex='-10' top={height - 280}>
+            <Box 
+                component={motion.div}
+                position='absolute' 
+                zIndex='-10' 
+                top={height - (273*1.25)}
+            >
                 <LandingWaves></LandingWaves>
             </Box>
         </Box>
