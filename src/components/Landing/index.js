@@ -96,6 +96,9 @@ export default function Landing() {
                 position='absolute' 
                 zIndex='-10' 
                 top={height - (273*1.25)}
+                initial={{ y: (height - (273*1.25)) }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1 }}
             >
                 <LandingWaves></LandingWaves>
             </Box>
