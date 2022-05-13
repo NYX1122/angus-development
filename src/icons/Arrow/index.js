@@ -10,16 +10,10 @@ export default function Arrow({ order }) {
     const { height } = useWindowDimensions();
     
     const lineHeight = () => {
-        if(height < 850 && height > 730) {
-            return 200 - (850 - height);
-        } else if (height < 730) {
-            return 160 - (730 - height);
-        } else {
-            return 300
-        }
+        return height*.33;
     }
 
-    const arrowHeight = lineHeight() - 34;
+    const arrowHeight = lineHeight() - 33;
 
     return (
         <Box sx={{ position: 'relative' }}>

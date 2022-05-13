@@ -27,7 +27,7 @@ export default function Landing() {
 
     return(
         <Box position='relative'>
-            <Box sx={{ width: '91%', marginX: '5%', paddingLeft: '2%', paddingY: 3 }}>
+            <Box sx={{ paddingLeft: '3%', paddingTop: (height < 730) ? 0.5 : 1, paddingBottom: (height < 730) ? 2.5 : 3 }}>
                 {landingWords.map((word, index) => (
                     <LandingIntroduction word={word} index={index} key={index} wordLengthArray={wordLengthArray}></LandingIntroduction>
                 ))}
@@ -57,7 +57,7 @@ export default function Landing() {
                     animate={{ x: 0 }}
                     transition={{ duration: 2, ease: 'easeInOut' }}
                 ></Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: (height <= 730) ? '40px' : '50px' }}>
                     {projectLetters.map((letter, index) => (
                         <ProjectsText letter={letter} key={index} index={index}></ProjectsText>
                     ))}

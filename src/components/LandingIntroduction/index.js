@@ -15,12 +15,12 @@ export default function LandingIntroduction({ word, index, wordLengthArray }) {
         .reduce((previousValue, value) => value + previousValue, 0);
 
     return(
-        <Box sx={{ display: 'inline-block' }}>
+        <Box sx={{ display: 'inline-block', height: '40px' }}>
                 {letters.map((letter, index2) => (
                     <React.Fragment key={index2}>
                         <Typography
                             component={motion.p}
-                            fontSize={ (height < 730) ? '34px' : '38px' } 
+                            fontSize={ (height < 730) ? '34px' : '36px' } 
                             sx={{
                                 color: 'white',
                                 textShadow: '0 4px 4px #00000025',
@@ -36,7 +36,7 @@ export default function LandingIntroduction({ word, index, wordLengthArray }) {
                 ))}
                 <Typography
                     component={motion.p}
-                    fontSize={ (height < 730) ? '34px' : '38px' } 
+                    fontSize={ (height < 730) ? '34px' : '40px' } 
                     sx={{
                         color: 'white',
                         textShadow: '0 4px 4px #00000025',
