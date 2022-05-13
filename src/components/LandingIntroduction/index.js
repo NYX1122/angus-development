@@ -8,6 +8,9 @@ import { motion } from 'framer-motion';
 
 export default function LandingIntroduction({ word, index, wordLengthArray }) {
     const { height } = useWindowDimensions();
+
+    const speedVariable = 6;
+
     const letters = word.split('');
 
     const previousLetters = wordLengthArray
@@ -28,7 +31,7 @@ export default function LandingIntroduction({ word, index, wordLengthArray }) {
                             }}
                             initial={{ opacity: 0, display: 'none' }}
                             animate={{ opacity: 1, display: 'inline-block' }}
-                            transition={{ duration: .08, delay: (index2*.10) + (previousLetters/10) }}
+                            transition={{ duration: .08, delay: (index2*(speedVariable/100)) + (previousLetters/((speedVariable === 10) ? 10 : ((speedVariable/-10) + 2)*10))}}
                         >
                             {letter}
                         </Typography>
@@ -44,7 +47,7 @@ export default function LandingIntroduction({ word, index, wordLengthArray }) {
                     }}
                     initial={{ display: 'none' }}
                     animate={{ display: 'inline-block' }}
-                    transition={{ delay: (index*.15) + (previousLetters/13) }}
+                    transition={{ delay: (index*(((speedVariable + 5) === 15) ? .15 : ((speedVariable/10)*15)/100)) + (previousLetters/((speedVariable === 10) ? 13 : ((speedVariable/-10) + 2)*13))}}
                 >
                     {'\u00A0'}
                 </Typography>

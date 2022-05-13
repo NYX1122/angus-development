@@ -41,7 +41,7 @@ export default function Landing() {
                     }}
                     initial={{ x: -5 }}
                     animate={{ opacity: 0 }}
-                    transition={{ duration: .3, delay: (landingIntroLetterCount*.1029), repeat: 16, repeatType: 'mirror' }}
+                    transition={{ duration: .3, delay: (landingIntroLetterCount*.1029)*.65, repeat: 16, repeatType: 'mirror' }}
                 ></Box> 
             </Box>
             <Box sx={{
@@ -95,9 +95,6 @@ export default function Landing() {
                 position='absolute' 
                 zIndex='-10' 
                 top={height - (273*1.25)}
-                initial={{ y: (height - (273*1.25)) }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1 }}
             >
                 <LandingWaves></LandingWaves>
             </Box>
