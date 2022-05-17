@@ -5,14 +5,25 @@ import Title from '../Title';
 
 import { Box, IconButton, Grid } from '@mui/material';
 
-import { motion } from 'framer-motion';
+import { motion, useViewportScroll, useTransform, useMotionValue } from 'framer-motion';
 
 export default function Header() {
     const title = 'Angus Development';
     const titleLetters = title.split("");
 
+    const { scrollYProgress } = useViewportScroll();
+    const scrollRange = [0, 1];
+    const colorRange = ['#FF8271', '#71FF82'];
+
+    const backgroundColor = useTransform(scrollYProgress, scrollRange, colorRange);
+
     return(
-        <Box>
+        <Box
+            component={motion.div}
+            sx={{ position: 'fixed', width: '100vw', zIndex: 10 }}
+            animate={{ scrollYProgress: 0 }}
+            style={{ backgroundColor, scrollYProgress }}
+        >
             <Grid container>
                 <Grid item xs={8.5}>
                     <Box>
