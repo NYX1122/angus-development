@@ -11,19 +11,19 @@ export default function MenuIcon() {
       fill='none'
       viewBox='0 0 60 11'
     >
-      <motion.path 
-        stroke='#fff' 
-        strokeWidth='2' 
+      <motion.path
+        stroke='#fff'
+        strokeWidth='2'
         d='M0 1L60 1'
-        initial={{ pathLength: 0 }} 
+        initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{ duration: 2, ease: 'easeOut' }}
       ></motion.path>
-      <motion.path 
-        stroke='#fff' 
-        strokeWidth='2' 
+      <motion.path
+        stroke='#fff'
+        strokeWidth='2'
         d='M0 10L60 10'
-        initial={{ pathLength: 0, rotateZ: 180 }} 
+        initial={{ pathLength: 0, rotateZ: 180 }}
         animate={{ pathLength: 1 }}
         transition={{ duration: 2, ease: 'easeOut' }}
       ></motion.path>
